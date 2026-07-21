@@ -1,0 +1,55 @@
+api_version: 1.0
+
+cspace:
+  - openarm_right_joint1
+  - openarm_right_joint2
+  - openarm_right_joint3
+  - openarm_right_joint4
+  - openarm_right_joint5
+  - openarm_right_joint6
+  - openarm_right_joint7
+
+default_q: [0.0, 0.0, 0.0, 1.2, 0.0, 0.0, 0.0]
+
+acceleration_limits: [20.0, 20.0, 20.0, 20.0, 20.0, 10.0, 10.0]
+jerk_limits: [10000.0, 10000.0, 10000.0, 10000.0, 10000.0, 10000.0, 10000.0]
+
+cspace_to_urdf_rules:
+  - name: openarm_left_joint1
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_joint2
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_joint3
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_joint4
+    rule: fixed
+    value: 1.2
+  - name: openarm_left_joint5
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_joint6
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_joint7
+    rule: fixed
+    value: 0.0
+  - name: openarm_left_finger_joint1
+    rule: fixed
+    value: 0.02
+  - name: openarm_left_finger_joint2
+    rule: fixed
+    value: 0.02
+  - name: openarm_right_finger_joint1
+    rule: fixed
+    value: 0.02
+  - name: openarm_right_finger_joint2
+    rule: fixed
+    value: 0.02
+
+collision_spheres:
+  - openarm_right_link0:
+    - center: [0.0, 0.0, 0.05]
+      radius: 0.05
